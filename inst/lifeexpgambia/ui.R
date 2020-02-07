@@ -8,7 +8,8 @@ ui <- fluidPage(
 
     mainPanel(
       plotlyOutput("plot1"),
-      plotlyOutput("plot2")
+      plotlyOutput("plot2"),
+      plotlyOutput("plot3")
     )
   )
 )

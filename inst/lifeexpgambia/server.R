@@ -34,4 +34,22 @@ server <- function(input, output) {
     f2
   })
 
+  output$plot3 <- renderPlotly({
+    print("sampledata")
+    data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
+    class(data1)
+    tn <- c("YEAR","LIFEEXP","GDP")
+
+    colnames(data1) <-tn
+
+
+
+    f3 <- plot_ly(data1, x = ~GDP, y = ~LIFEEXP ) %>%
+
+      add_lines(color=I("green"),name=~"GDP/LIFEEXP")
+
+
+    f3
+  })
+
 }
