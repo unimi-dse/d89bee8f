@@ -1,5 +1,5 @@
 Package: lifeexpgambia
-Type: Basic statistical analysis
+Type: Package
 Title: relationship between life expectancy and Gdp per capita.
 Version: 0.1.0
 Author: Sainey Manga
