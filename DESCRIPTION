@@ -1,0 +1,10 @@
+Package: lifeexpgambia
+Type: Basic statistical analysis
+Title: relationship between life expectancy and Gdp per capita.
+Version: 0.1.0
+Author: Sainey Manga
+Maintainer: Sainey Manga <saineymanga@gmail.com>
+Description: This package uses evidences from the gambia to describe and correlate the relationship between life expectancy and gdp per capita.
+License: Unimi
+Encoding: UTF-8
+LazyData: true
