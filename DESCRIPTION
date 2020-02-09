@@ -4,7 +4,9 @@ Title: relationship between life expectancy and Gdp per capita.
 Version: 0.1.0
 Author: Sainey Manga
 Maintainer: Sainey Manga <saineymanga@gmail.com>
-Description: This package uses evidences from the gambia to describe and correlate the relationship between life expectancy and gdp per capita.
-License: Unimi
+Description: This package uses evidences from the gambia to describe by plotting and correlating to show the relationship between life expectancy and gdp per capita.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Imports: shiny, devtools, roxygen2, usethis, plotly, ggplot2, forecast, dplyr
+RoxygenNote: 7.0.2

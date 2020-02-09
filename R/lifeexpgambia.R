@@ -1,18 +1,14 @@
-# data1, sampledata!
-#
-# This is an example function named 'data1'
-# which prints 'data1, sampledata!'.
-#
-#
-#
-require(shiny)
-require("devtools")
-library("roxygen2")
-library("usethis")
-library("plotly")
-library("ggplot2")
-library("plotly")
-library(forecast)
+#'This is an example function named 'data1'
+#'data1, sampledata!
+#'which prints 'data1, sampledata!'.
+#'the following packages should be loaded to enable the shiny app view the three graphs through the fuction below.
+#'@export
+
+
 #
 
-shinyApp(ui= ui, server = server)
+appGUI <- function(){
+  sf <- system.file("lifeexpgambia", package = "lifeexpgambia")
+  shiny::runApp(sf, display.mode = "normal", launch.browser = T)
+
+}
