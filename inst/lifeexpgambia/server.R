@@ -59,7 +59,7 @@ server <- function(input, output) {
 
   output$reg <- renderText({
 
-    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia") #use this function to get your file path
+    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia")
     data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
     tn<-c("YEAR","LIFEEXP","GDP")
     colnames(data1)<-tn
