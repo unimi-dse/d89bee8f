@@ -42,7 +42,7 @@ server <- function(input, output) {
   })
 #' printing the graph that shows the relationship between life expectancy and Gdp per capita.
   output$plot3 <- plotly::renderPlotly({
-    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia") #use this function to get your file path
+    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia")
     data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
     print(data1)
     class(data1)
