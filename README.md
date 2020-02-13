@@ -12,7 +12,7 @@ devtools::install_github('unimi-dse/d89bee8f')
 ```
 
 ## Usage
-import lifeexpecgambia
+import lifeexpegambia
 
 plotly::plotlyOutput("plot1") # returns 'plot1'
 plotly::plotlyOutput("plot2") # returns 'plot2'
