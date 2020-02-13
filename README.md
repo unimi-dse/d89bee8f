@@ -1,9 +1,9 @@
-# lifeexpgambia
+## lifeexpgambia
 
 lifeexpgambia is a package that shows the relationship between Life expectancy and Gdp per capita through graphs and a regression analysis.
-The data,which I called sampledata, was downloaded from teh FRED(fedral bank of st luis) website through Emanuele Guidotti's website. The data is a time series data of the Gambia from 1966 to 2017.
+The data,which I called sampledata, was downloaded from the FRED(fedral bank of st luis) website through Emanuele Guidotti's website. The data is a time series data of the Gambia from 1966 to 2017.
 
-## Installation
+### Installation
 
 ```first
 # First install R package "devtools" if not installed
@@ -11,7 +11,7 @@ devtools::install_github('unimi-dse/d89bee8f')
 
 ```
 
-## Usage
+#### Usage
 Function "data1" prints out the sample data
 "f1" prints the graph that shows the trend of Gdp per capita over time and "f2" prints the graph which shows the trend of life expexpectancy over time.
 "f3" prints the graph which shows a linear relationship between the two variables.

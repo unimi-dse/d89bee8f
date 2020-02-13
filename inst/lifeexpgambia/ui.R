@@ -9,7 +9,8 @@ ui <- fluidPage(
     mainPanel(
       plotly::plotlyOutput("plot1"),
       plotly::plotlyOutput("plot2"),
-      plotly::plotlyOutput("plot3")
+      plotly::plotlyOutput("plot3"),
+      textOutput("reg")
     )
   )
 )

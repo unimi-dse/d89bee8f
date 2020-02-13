@@ -1,12 +1,14 @@
 #'printing the graph that shows the trend of Gdp per capita overtime
 #'
-library(plotly)
 server <- function(input, output) {
 
 
   output$plot1 <- plotly::renderPlotly({
     print("sampledata")
+    df<-system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia")
     data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
+
+    print(data1)
     class(data1)
     tn <- c("YEAR","LIFEEXP","GDP")
 
@@ -21,7 +23,11 @@ server <- function(input, output) {
 
   output$plot2 <- plotly::renderPlotly({
     print("sampledata")
+
+     df<-system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia")
     data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
+
+    print(data1)
     class(data1)
     tn <- c("YEAR","LIFEEXP","GDP")
 
@@ -36,8 +42,9 @@ server <- function(input, output) {
   })
 #' printing the graph that shows the relationship between life expectancy and Gdp per capita.
   output$plot3 <- plotly::renderPlotly({
-    print("sampledata")
+    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia") #use this function to get your file path
     data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
+    print(data1)
     class(data1)
     tn <- c("YEAR","LIFEEXP","GDP")
 
@@ -49,5 +56,19 @@ server <- function(input, output) {
 
     f3
   })
+
+  output$reg <- renderText({
+
+    df <- system.file("extdata", "sampledata.dta.csv", package = "lifeexpgambia") #use this function to get your file path
+    data1<-read.csv("/Users/saineymanga/Desktop/lifeexpgambia/inst/extdata/sampledata.dta.csv")
+    tn<-c("YEAR","LIFEEXP","GDP")
+    colnames(data1)<-tn
+    l<-summary(lm(LIFEEXP~GDP, data = data1))
+    paste(l)
+  })
+
 }
+
+
+
 
